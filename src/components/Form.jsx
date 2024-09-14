@@ -35,7 +35,7 @@ const Form = () => {
   );
 };
 
-// Styled-components
+
 const Motto= styled.p`
   font-size:20px;
   color: white;
@@ -46,14 +46,14 @@ const FormWrapper = styled.form`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #ff6347; /* Warm food color */
+  background-color: #ff6347; 
   align-items: center;
 `;
 
 const Logo = styled.h1`
   color: white;
   font-size: 2rem;
-  font-family: 'Pacifico', cursive; /* Fun food-themed font */
+  font-family: 'Pacifico', cursive; 
 `;
 
 const InputWrapper = styled.div`
@@ -67,6 +67,7 @@ const Input = styled.input`
   border: none;
   width: 300px;
   font-size: 1rem;
+  color: #ff6347;
 `;
 
 const Button = styled.button`

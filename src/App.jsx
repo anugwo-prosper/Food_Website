@@ -9,10 +9,9 @@ function App() {
   return (
     
       <div className="App">
-        {/* Fetch wraps the child components with the API context */}
+      
         <Fetch>
           <Form />
-          {/* Define the routes */}
           <Routes>
             <Route path="/" element={<Apilist />} />
             <Route path="/recipe/:id" element={<RecipeDetails />} />

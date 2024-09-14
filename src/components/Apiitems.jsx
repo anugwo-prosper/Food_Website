@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Apiitems = ({ tunde }) => {
   const navigate = useNavigate();
 
-  // Handle click event to navigate to the recipe details page
+  // i created this to handle click event to navigate to the recipe details page
   const handleClick = () => {
     navigate(`/recipe/${tunde.id}`);
   };
@@ -18,10 +18,10 @@ const Apiitems = ({ tunde }) => {
   );
 };
 
-// Styled-components for the card
+
 const Card = styled.div`
   width: 300px;
-  background-color: white;
+  background-color: #FF6347;
   border-radius: 15px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -42,8 +42,8 @@ const Card = styled.div`
 
 const Title = styled.h3`
   font-size: 1.2rem;
-  color: #333;
-  color: #ff6347;
+  /* color: #333; */
+  color: #ffffff;
 `;
 
 export default Apiitems;

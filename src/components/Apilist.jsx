@@ -23,18 +23,17 @@ const Apilist = () => {
   );
 };
 
-// Styled-components
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  background-color: #fdf3f0; /* Light neutral color matching search bar */
+  background-color: #fdf3f0; 
   gap: 20px;
 `;
 
 const Loading = styled.div`
-  color: #ff6347; /* Matches the search bar */
+  color: #ff6347; 
   font-size: 1.5rem;
   margin-top: 50px;
 `;

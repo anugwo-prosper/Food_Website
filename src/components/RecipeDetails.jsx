@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const RecipeDetails = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // Extract the recipe ID from the URL
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
@@ -20,20 +21,26 @@ const RecipeDetails = () => {
   if (!recipe) return <div>Loading...</div>;
 
   return (
+    <Section>
     <RecipeWrapper>
       <h1>{recipe.title}</h1>
       <img src={recipe.image} alt={recipe.title} />
       <p><strong>Servings:</strong> {recipe.servings}</p>
       <p><strong>Ready in:</strong> {recipe.readyInMinutes} minutes</p>
+      
       <p><strong>Ingredients:</strong></p>
       <ul>
         {recipe.extendedIngredients.map((ing) => (
           <li key={ing.id}>{ing.original}</li>
         ))}
       </ul>
+      
       <p><strong>Instructions:</strong></p>
-      <p>{recipe.instructions}</p>
+      <p 
+        dangerouslySetInnerHTML={{ __html: recipe.instructions }} 
+      />
     </RecipeWrapper>
+    </Section>
   );
 };
 
@@ -75,5 +82,10 @@ const RecipeWrapper = styled.div`
     color: #ff6347;
   }
 `;
+const Section= styled.div`
+  background-color: #fdf3f0;
+  padding: 20px;
+`
+
 
 export default RecipeDetails;

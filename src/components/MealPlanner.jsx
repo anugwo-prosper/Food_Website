@@ -4,7 +4,7 @@ const MealPlanner = ({ recipes }) => {
   const [mealPlan, setMealPlan] = useState({
     Monday: null,
     Tuesday: null,
-    // Add other days
+    
   });
 
   const handleAddRecipe = (day, recipe) => {

@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Fetch from './Fetch';
-import RecipeSearch from './components/RecipeSearch';
-import MealPlanner from './components/MealPlanner';
-import ShoppingList from './components/ShoppingList';
-import Apiitems from './components/Apiitems';
-import Apilist from './components/Apilist';
 import Form from './components/Form';
+import Apilist from './components/Apilist';
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
-  const [recipes, setRecipes] = useState([]);
-
   return (
-    <div className="App">
-      <Fetch>
-        <Form />
-        <RecipeSearch setRecipes={setRecipes} />
-        <MealPlanner recipes={recipes} />
-        <ShoppingList recipes={recipes} />
-        <Apilist />
-      </Fetch>
-    </div>
+    
+      <div className="App">
+        {/* Fetch wraps the child components with the API context */}
+        <Fetch>
+          <Form />
+          {/* Define the routes */}
+          <Routes>
+            <Route path="/" element={<Apilist />} />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
+          </Routes>
+        </Fetch>
+      </div>
+  
   );
 }
 

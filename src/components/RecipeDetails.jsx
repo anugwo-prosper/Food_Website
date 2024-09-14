@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-// Use environment variable for the API key
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const RecipeDetails = () => {
-  const { id } = useParams(); // Extract the recipe ID from the URL
+  const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const RecipeDetails = () => {
   if (!recipe) return <div>Loading...</div>;
 
   return (
-    <RecipeWrapper >
+    <RecipeWrapper>
       <h1>{recipe.title}</h1>
       <img src={recipe.image} alt={recipe.title} />
       <p><strong>Servings:</strong> {recipe.servings}</p>

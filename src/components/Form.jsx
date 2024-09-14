@@ -18,7 +18,10 @@ const Form = () => {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <Logo>Food Explorer</Logo>
+      <div>
+      <Logo>Prosper's Recipes</Logo>
+      <Motto>At PRP, we have you covered with delightful recipes...</Motto>
+      </div>
       <InputWrapper>
         <Input 
           value={film}
@@ -33,6 +36,12 @@ const Form = () => {
 };
 
 // Styled-components
+const Motto= styled.p`
+  font-size:20px;
+  color: white;
+
+`
+
 const FormWrapper = styled.form`
   display: flex;
   justify-content: space-between;

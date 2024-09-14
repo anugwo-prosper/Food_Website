@@ -43,6 +43,7 @@ const Card = styled.div`
 const Title = styled.h3`
   font-size: 1.2rem;
   color: #333;
+  color: #ff6347;
 `;
 
 export default Apiitems;

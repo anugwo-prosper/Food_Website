@@ -45,28 +45,34 @@ const RecipeWrapper = styled.div`
   
   img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 130px;
     margin-bottom: 20px;
   }
 
   h1 {
     color: #ff6347;
     margin-bottom: 20px;
+    
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin: 10px 0;
+    color: #ff6347;
   }
 
   ul {
     list-style-type: none;
     padding: 0;
+    color: #ff6347;
+    font-size: 1.7rem;
   }
 
   li {
     font-size: 1.1rem;
+    font-size: 1.7rem;
     margin: 5px 0;
+    color: #ff6347;
   }
 `;
 

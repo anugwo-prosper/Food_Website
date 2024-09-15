@@ -26,11 +26,15 @@ const Apilist = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; 
   padding: 20px;
-  background-color: #fdf3f0; 
-  gap: 20px;
+  background-color: #fdf3f0;
+  gap: 20px; 
+  width: 100%;
+  box-sizing: border-box;
 `;
+
+
 
 const Loading = styled.div`
   color: #ff6347; 

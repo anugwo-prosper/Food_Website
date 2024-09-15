@@ -18,9 +18,8 @@ const Apiitems = ({ tunde }) => {
   );
 };
 
-
 const Card = styled.div`
-  width: 300px;
+  width: calc(25% - 20px); 
   background-color: #FF6347;
   border-radius: 15px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
@@ -28,6 +27,7 @@ const Card = styled.div`
   text-align: center;
   transition: transform 0.3s ease;
   cursor: pointer;
+  box-sizing: border-box;
 
   &:hover {
     transform: scale(1.05);
@@ -39,6 +39,8 @@ const Card = styled.div`
     margin-bottom: 10px;
   }
 `;
+
+
 
 const Title = styled.h3`
   font-size: 1.2rem;
